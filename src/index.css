@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-accent: "Caveat", cursive;
+  
+  --color-royal-blue: #1E3A8A;
+  --color-vibrant-pink: #EC5A9A;
+  --color-purple: #6B4BA7;
+  --color-joyful-yellow: #FFC700;
+  --color-sky-blue: #7DD3F2;
+  --color-music-bg: #F9FAFB;
+}
+
+@layer base {
+  body {
+    @apply bg-music-bg text-gray-900 font-sans;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-royal-blue via-purple to-vibrant-pink;
+  }
+  
+  .bg-gradient-music {
+    @apply bg-gradient-to-br from-royal-blue/5 via-sky-blue/10 to-vibrant-pink/5;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
